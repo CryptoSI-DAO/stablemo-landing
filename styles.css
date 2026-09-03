@@ -91,7 +91,7 @@ p { color: var(--muted); }
 .btn-gold:hover { background: var(--sun); transform: translateY(-1px); box-shadow: 0 12px 32px rgba(255, 178, 10, 0.5); }
 .btn-ghost { border-color: var(--border); color: var(--navy); background: var(--white); }
 .btn-ghost:hover { border-color: var(--blue); color: var(--blue); }
-.btn-sm { padding: 9px 20px; font-size: 0.9rem; }
+.btn-sm { padding: 10px 20px; font-size: 0.9rem; }
 
 /* ---------- header ---------- */
 .site-header {
@@ -104,6 +104,7 @@ p { color: var(--muted); }
   border-bottom: 1px solid rgba(221, 230, 242, 0.7);
 }
 .header-inner { display: flex; align-items: center; gap: 16px; height: 66px; }
+.brand { display: inline-flex; align-items: center; padding: 8px 0; }
 .brand img { height: 30px; width: auto; }
 
 .nav-toggle {
@@ -111,14 +112,14 @@ p { color: var(--muted); }
   background: none;
   border: none;
   cursor: pointer;
-  padding: 8px;
-  border-radius: 8px;
+  padding: 11px;
+  border-radius: 10px;
   line-height: 0;
 }
 .nav-toggle:active { background: var(--cloud); }
 
 .site-nav { display: flex; align-items: center; gap: 26px; margin-left: auto; }
-.site-nav a { text-decoration: none; color: var(--ink); font-weight: 500; font-size: 0.95rem; transition: color 0.15s; }
+.site-nav a:not(.btn) { text-decoration: none; color: var(--ink); font-weight: 500; font-size: 0.95rem; padding: 8px 10px; transition: color 0.15s; }
 .site-nav a:hover { color: var(--blue); }
 .site-nav .btn { margin-left: 4px; }
 .header-cta { display: none; margin-left: auto; }
@@ -424,7 +425,7 @@ details[open] .faq-chev { transform: rotate(225deg) translateY(-2px); }
   border-radius: 999px;
   padding: 15px 24px;
   font: inherit;
-  font-size: 0.98rem;
+  font-size: 1rem; /* ≥16px: prevents iOS auto-zoom on focus */
   outline: none;
   transition: border-color 0.15s ease, background 0.15s ease;
   min-width: 0;
@@ -440,8 +441,8 @@ details[open] .faq-chev { transform: rotate(225deg) translateY(-2px); }
 .footer-inner { display: grid; gap: 28px; justify-items: center; text-align: center; }
 .footer-brand img { height: 28px; width: auto; margin: 0 auto 12px; }
 .footer-brand p { color: #7e93b5; font-size: 0.9rem; }
-.footer-links { display: flex; flex-wrap: wrap; gap: 22px; justify-content: center; }
-.footer-links a { color: #CFE0F5; text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.footer-links a { color: #CFE0F5; text-decoration: none; font-size: 0.9rem; font-weight: 500; padding: 9px 10px; }
 .footer-links a:hover { color: var(--gold); }
 .footer-legal { color: #5c7096; font-size: 0.78rem; max-width: 640px; }
 
