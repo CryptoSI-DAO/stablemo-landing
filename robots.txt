@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://stablemo.vercel.app/sitemap.xml

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StableMo — Trade stablecoins with Mobile Money</title>
+  <meta name="description" content="StableMo is a peer-to-peer marketplace where Ghana trades USDT for Mobile Money — on-chain escrow, direct MoMo payment, one flat 0.5% fee and a known dispute path.">
+  <link rel="canonical" href="https://stablemo.vercel.app/">
+  <meta name="theme-color" content="#071B3A">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="StableMo">
+  <meta property="og:title" content="StableMo — Trade stablecoins with Mobile Money">
+  <meta property="og:description" content="USDT escrowed on-chain. MoMo paid peer-to-peer. One flat fee, shown upfront. Built for Ghana.">
+  <meta property="og:url" content="https://stablemo.vercel.app/">
+  <meta property="og:image" content="https://stablemo.vercel.app/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="StableMo — Trade stablecoins with Mobile Money">
+  <meta name="twitter:description" content="USDT escrowed on-chain. MoMo paid peer-to-peer. Built for Ghana.">
+  <meta name="twitter:image" content="https://stablemo.vercel.app/assets/og-image.png">
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/logo-icon-192.png">
+  <link rel="apple-touch-icon" href="/assets/logo-icon-192.png">
+
+  <!-- Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "Does StableMo hold my money?", "acceptedAnswer": {"@type": "Answer", "text": "No. Trade USDT is held by a smart-contract escrow on-chain, not by the platform. Mobile Money moves directly between the two traders."}},
+      {"@type": "Question", "name": "Who can see my Mobile Money number?", "acceptedAnswer": {"@type": "Answer", "text": "Only your trading counterparty and the trade's preselected arbiter, and only after a trade opens. MoMo numbers are never shown in public listings."}},
+      {"@type": "Question", "name": "What happens if a trade goes wrong?", "acceptedAnswer": {"@type": "Answer", "text": "Every trade has an arbiter chosen by the offer creator and accepted by both sides before the trade opens. The arbiter reviews the trade chat and rules to release the escrow or refund it."}},
+      {"@type": "Question", "name": "What does StableMo cost?", "acceptedAnswer": {"@type": "Answer", "text": "One flat platform fee of 0.5% in USDT, plus a 0.1% arbiter allocation per trade — both shown on the quote before you accept."}},
+      {"@type": "Question", "name": "When does StableMo launch?", "acceptedAnswer": {"@type": "Answer", "text": "StableMo is in pre-launch. Join the waitlist to be invited to the controlled Ghana pilot first."}}
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#071B3A" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <a href="/" class="brand" aria-label="StableMo home">
+        <img src="/assets/logo-lockup.png" alt="StableMo" height="34" width="134">
+      </a>
+      <nav class="site-nav" id="navMenu" aria-label="Main">
+        <a href="#how">How it works</a>
+        <a href="#why">Why StableMo</a>
+        <a href="#fees">Fees</a>
+        <a href="#faq">FAQ</a>
+        <a href="#waitlist" class="btn btn-primary btn-sm">Join waitlist</a>
+      </nav>
+      <a href="#waitlist" class="btn btn-primary btn-sm header-cta">Join waitlist</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <h1>Trade stablecoins with <span class="accent-gold">Mobile&nbsp;Money.</span></h1>
+          <p class="lede">StableMo connects USDT liquidity with everyday Mobile Money payments. Every trade is escrowed on-chain, paid peer-to-peer, and covered by a named arbiter you both agreed to.</p>
+          <div class="hero-ctas">
+            <a href="#waitlist" class="btn btn-primary">Join the waitlist</a>
+            <a href="#how" class="btn btn-ghost">See how it works</a>
+          </div>
+          <ul class="trust-chips" aria-label="Key guarantees">
+            <li><span class="chip-dot"></span>USDT locked in smart-contract escrow</li>
+            <li><span class="chip-dot"></span>MoMo paid directly to your counterparty</li>
+            <li><span class="chip-dot"></span>0.5% fee — shown before you accept</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual reveal delay-1" aria-hidden="true">
+          <div class="phone">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="app-head">
+                <span class="app-logo"><img src="/assets/logo-icon-192.png" alt=""></span>
+                <span class="app-title">StableMo</span>
+                <span class="app-pill live">LIVE RATES</span>
+              </div>
+              <div class="trade-card">
+                <div class="trade-rows">
+                  <div class="t-row">
+                    <span class="t-cur">USDT</span>
+                    <span class="t-amt">100.00</span>
+                  </div>
+                  <div class="t-mid">
+                    <span class="t-arrow">⇅</span>
+                    <span class="t-rate">₵16.20 / USDT</span>
+                  </div>
+                  <div class="t-row">
+                    <span class="t-cur gold">MoMo</span>
+                    <span class="t-amt">₵1,620</span>
+                  </div>
+                </div>
+                <div class="escrow-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  Escrow funded
+                </div>
+              </div>
+              <div class="mini-note">
+                <span class="count">58:12</span> left to pay by MoMo
+              </div>
+              <div class="arb-card">
+                <div class="arb-ava">AK</div>
+                <div class="arb-meta">
+                  <strong>Arbiter on this trade</strong>
+                  <span>Agreed by both sides before opening</span>
+                </div>
+                <span class="arb-check">✓</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-base" aria-hidden="true"></div>
+    </section>
+
+    <!-- VALUE STRIP -->
+    <section class="strip">
+      <div class="container strip-grid">
+        <div class="strip-item"><span class="strip-ic">🔒</span><div><strong>On-chain escrow</strong><span>Funds locked until settlement</span></div></div>
+        <div class="strip-item"><span class="strip-ic">📲</span><div><strong>Direct MoMo payment</strong><span>Peer-to-peer, no middleman</span></div></div>
+        <div class="strip-item"><span class="strip-ic">🧾</span><div><strong>Transparent pricing</strong><span>Every fee shown upfront</span></div></div>
+        <div class="strip-item"><span class="strip-ic">⚖️</span><div><strong>Known dispute path</strong><span>A named arbiter per trade</span></div></div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section" id="how">
+      <div class="container">
+        <p class="kicker reveal">How it works</p>
+        <h2 class="reveal">Three steps. No surprises.</h2>
+        <div class="steps">
+          <article class="step reveal">
+            <div class="step-num">1</div>
+            <h3>Pick an offer</h3>
+            <p>Compare live GHS rates from bonded sellers — or post a Quick Buy request at your own price. You'll see the exact GHS amount and all fees before you commit.</p>
+          </article>
+          <article class="step reveal delay-1">
+            <div class="step-num">2</div>
+            <h3>Pay by Mobile Money</h3>
+            <p>The seller's USDT is locked in smart-contract escrow first. Then you pay by MoMo directly — payment details stay private until the trade opens.</p>
+          </article>
+          <article class="step reveal delay-2">
+            <div class="step-num">3</div>
+            <h3>Settle with certainty</h3>
+            <p>The seller confirms your payment and your USDT releases instantly. One-hour windows keep every trade moving — and a pre-agreed arbiter is there if it doesn't.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section class="section section-cloud" id="why">
+      <div class="container">
+        <p class="kicker reveal">Why StableMo</p>
+        <h2 class="reveal">Trust first. Crypto second.</h2>
+        <p class="section-sub reveal">StableMo is built to feel like a dependable payment marketplace — not a speculative trading app.</p>
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card-ic blue">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <h3>Your USDT stays in escrow</h3>
+            <p>A smart contract holds the trade amount until settlement. The platform never touches trade funds — and can't move them.</p>
+          </article>
+          <article class="card reveal delay-1">
+            <div class="card-ic gold">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M12 18h.01"/></svg>
+            </div>
+            <h3>Real peer-to-peer</h3>
+            <p>Mobile Money moves straight between you and your counterparty. No platform custody, no float, no forwarding.</p>
+          </article>
+          <article class="card reveal delay-2">
+            <div class="card-ic blue">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 15l2 2 4-4"/></svg>
+            </div>
+            <h3>Prices you can check</h3>
+            <p>Sellers set their own rates; the market keeps them honest. One flat platform fee, printed on every quote before you accept.</p>
+          </article>
+          <article class="card reveal delay-3">
+            <div class="card-ic gold">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>A human dispute path</h3>
+            <p>Every trade carries an arbiter both sides accepted up front. If things go wrong, they review the full trade chat and rule — release or refund.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRADE TIMELINE -->
+    <section class="section section-navy timeline-section">
+      <div class="container">
+        <p class="kicker kicker-light reveal">The life of a trade</p>
+        <h2 class="light reveal">Escrowed at every step</h2>
+        <ol class="timeline" aria-label="Trade lifecycle">
+          <li class="reveal"><span class="tl-dot"></span><strong>Offer accepted</strong><span>Rate, limits and arbiter agreed — nothing moves yet.</span></li>
+          <li class="reveal delay-1"><span class="tl-dot"></span><strong>USDT escrowed</strong><span>Seller funds the smart contract. 1-hour payment window starts.</span></li>
+          <li class="reveal delay-2"><span class="tl-dot"></span><strong>MoMo paid</strong><span>You pay the seller directly and mark it sent with a reference.</span></li>
+          <li class="reveal delay-3"><span class="tl-dot tl-dot-gold"></span><strong>USDT released</strong><span>Seller confirms — or the arbiter rules. Escrow settles either way.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- FEES -->
+    <section class="section" id="fees">
+      <div class="container fees-grid">
+        <div class="fees-copy reveal">
+          <p class="kicker">Fees</p>
+          <h2>One flat fee.<br>Zero fine print.</h2>
+          <p class="section-sub">You see the complete cost — platform fee, arbiter allocation, network cost and your net USDT — on the quote screen, before you accept any trade.</p>
+        </div>
+        <div class="fee-card reveal delay-1">
+          <div class="fee-main">
+            <span class="fee-num">0.5<small>%</small></span>
+            <span class="fee-label">platform fee<br>paid in USDT</span>
+          </div>
+          <div class="fee-sub">
+            <div class="fee-line"><span>Arbiter allocation</span><strong>0.1% per trade</strong></div>
+            <div class="fee-line"><span>Withdrawal/settlement surprises</span><strong>None</strong></div>
+          </div>
+          <div class="fee-example">
+            On a <strong>100 USDT</strong> trade, the platform fee is <strong>0.5 USDT</strong> — shown to both sides before the trade opens.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-cloud" id="faq">
+      <div class="container container-narrow">
+        <p class="kicker reveal">Questions</p>
+        <h2 class="reveal">Straight answers</h2>
+        <div class="faq reveal">
+          <details>
+            <summary>Does StableMo hold my money?<span class="faq-chev" aria-hidden="true"></span></summary>
+            <p>No. Trade USDT is held by a smart-contract escrow on-chain — not by the platform, not by an operator wallet. Mobile Money moves directly between the two traders.</p>
+          </details>
+          <details>
+            <summary>Who can see my Mobile Money number?<span class="faq-chev" aria-hidden="true"></span></summary>
+            <p>Only your counterparty and the trade's preselected arbiter — and only after the trade opens. MoMo numbers never appear in public listings and never touch the blockchain.</p>
+          </details>
+          <details>
+            <summary>What happens if a trade goes wrong?<span class="faq-chev" aria-hidden="true"></span></summary>
+            <p>Every trade has an arbiter chosen by the offer creator and accepted by both sides before opening. They see the complete trade chat — payment references included — and rule to release the escrow or refund it. One ruling, on record.</p>
+          </details>
+          <details>
+            <summary>What does it cost?<span class="faq-chev" aria-hidden="true"></span></summary>
+            <p>A flat 0.5% platform fee in USDT plus a 0.1% arbiter allocation per trade. Both are shown on the quote screen before you accept — the amount you see is the deal you get.</p>
+          </details>
+          <details>
+            <summary>When does StableMo launch?<span class="faq-chev" aria-hidden="true"></span></summary>
+            <p>We're in pre-launch. Join the waitlist and you'll be first in line for the controlled Ghana pilot, with launch news and invites before anyone else.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- WAITLIST -->
+    <section class="section waitlist" id="waitlist">
+      <div class="container container-narrow waitlist-inner">
+        <img src="/assets/logo-icon-192.png" alt="" width="64" height="64" class="waitlist-logo reveal">
+        <h2 class="light reveal">Be first in line when StableMo opens.</h2>
+        <p class="light-sub reveal">Join the waitlist for pilot invites and launch news. No spam — that's a promise, not a slogan.</p>
+        <form id="waitlistForm" class="waitlist-form reveal" novalidate>
+          <label class="visually-hidden" for="wl-email">Email address</label>
+          <input type="email" id="wl-email" name="email" placeholder="you@example.com" autocomplete="email" required>
+          <button type="submit" class="btn btn-gold" id="wl-btn">Join the waitlist</button>
+        </form>
+        <p class="form-status" id="wl-status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="/assets/logo-lockup.png" alt="StableMo" height="30" width="118">
+        <p>Stablecoins meet Mobile Money. Built in Ghana, for Ghana.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="#how">How it works</a>
+        <a href="#fees">Fees</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://github.com/CryptoSI-DAO" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+      <p class="footer-legal">© <span id="year">2026</span> CryptoSI DAO · Crypto assets involve risk. StableMo does not provide investment advice. Payment details are shared only inside accepted trades.</p>
+    </div>
+  </footer>
+
+  <script src="/main.js" defer></script>
+</body>
+</html>
