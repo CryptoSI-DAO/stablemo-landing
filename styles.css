@@ -428,6 +428,70 @@ p { color: var(--muted); }
 }
 .fee-example strong { color: var(--gold); }
 
+/* ---------- photo band ---------- */
+.photo-band {
+  position: relative;
+  height: clamp(340px, 46vw, 520px);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+.band-img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: 50% 32%;
+  transform-origin: 56% 40%;
+  animation: kenburns 42s ease-in-out infinite alternate;
+}
+@keyframes kenburns {
+  0% { transform: scale(1) translate(0, 0); }
+  100% { transform: scale(1.12) translate(-1.6%, -1.6%); }
+}
+.band-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(7, 27, 58, 0.18) 0%, rgba(7, 27, 58, 0.62) 62%, rgba(7, 27, 58, 0.86) 100%);
+}
+.band-copy {
+  position: relative;
+  padding-bottom: clamp(28px, 5vw, 52px);
+}
+.band-quote {
+  color: var(--white);
+  font-size: clamp(1.35rem, 3.4vw, 2.2rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  max-width: 720px;
+  line-height: 1.25;
+}
+.band-sub {
+  color: #CFE0F5;
+  margin-top: 10px;
+  font-size: clamp(0.95rem, 1.6vw, 1.08rem);
+  max-width: 620px;
+}
+
+/* ---------- people cards ---------- */
+.people-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 44px; }
+.people-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.people-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+.people-card img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
+}
+.people-card figcaption { padding: 20px 22px 24px; display: grid; gap: 6px; }
+.people-card strong { color: var(--navy); font-size: 1.05rem; }
+.people-card span { color: var(--muted); font-size: 0.92rem; }
+
 /* ---------- FAQ ---------- */
 .faq { display: grid; gap: 12px; margin-top: 40px; }
 .faq details {
@@ -573,6 +637,7 @@ details[open] .faq-chev { transform: rotate(225deg) translateY(-2px); }
   .timeline { grid-template-columns: 1fr; gap: 26px; }
   .timeline::before { display: none; }
   .fees-grid { grid-template-columns: 1fr; }
+  .people-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 740px) {
@@ -622,6 +687,7 @@ details[open] .faq-chev { transform: rotate(225deg) translateY(-2px); }
   .app-pill::before { animation: none; }
   .tick-up { animation: none; }
   .form-status.ok.pop { animation: none; }
+  .band-img { animation: none; }
 }
 
 .visually-hidden {
