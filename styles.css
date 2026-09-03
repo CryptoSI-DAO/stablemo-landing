@@ -318,6 +318,26 @@ p { color: var(--muted); }
   border-radius: 100% 100% 0 0;
 }
 
+/* ---------- facts (at a glance) ---------- */
+.facts { background: var(--c-cloud); padding-top: clamp(40px, 6vw, 72px); }
+.facts-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.fact {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 20px;
+  box-shadow: var(--shadow-sm);
+}
+.fact strong {
+  display: block;
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--c-blue);
+}
+.fact:nth-child(2) strong { color: var(--gold-ink); }
+.fact span { color: var(--muted); font-size: 0.88rem; line-height: 1.45; }
+
 /* ---------- value strip ---------- */
 .strip { background: var(--c-cloud); padding: 8px 0 56px; }
 .strip-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
@@ -649,6 +669,7 @@ details[open] .faq-chev { transform: rotate(225deg) translateY(-2px); }
   .hero-grid { grid-template-columns: 1fr; }
   .hero-visual { margin-top: 12px; }
   .strip-grid { grid-template-columns: repeat(2, 1fr); }
+  .facts-grid { grid-template-columns: repeat(2, 1fr); }
   .steps { grid-template-columns: 1fr; gap: 30px; }
   .cards { grid-template-columns: 1fr; }
   .timeline { grid-template-columns: 1fr; gap: 26px; }

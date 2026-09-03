@@ -1,4 +1,27 @@
+# StableMo — robots.txt
+# Search + AI answer engines are all welcome.
+
 User-agent: *
+Allow: /
+
+# Explicit welcomes (all already covered by Allow: * — kept for clarity)
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+User-agent: meta-externalagent
 Allow: /
 
 Sitemap: https://stablemo.vercel.app/sitemap.xml

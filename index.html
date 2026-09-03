@@ -3,23 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StableMo — Trade stablecoins with Mobile Money</title>
-  <meta name="description" content="StableMo is a peer-to-peer marketplace where Ghana trades USDT for Mobile Money — on-chain escrow, direct MoMo payment, one flat 0.5% fee and a known dispute path.">
+  <title>Buy & Sell USDT with Mobile Money in Ghana | StableMo P2P Marketplace</title>
+  <meta name="description" content="StableMo is Ghana's peer-to-peer marketplace for trading USDT with Mobile Money. On-chain escrow protects every trade, MoMo is paid directly between users, and one flat 0.5% fee is shown upfront. Join the waitlist for early access.">
+  <meta name="keywords" content="buy USDT Ghana, sell USDT Mobile Money, USDT MoMo, P2P crypto Ghana, stablecoin Mobile Money, USDT cedis, trade USDT MTN MoMo, StableMo">
+  <meta name="author" content="CryptoSI DAO">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="geo.region" content="GH">
+  <meta name="geo.placename" content="Accra, Ghana">
   <link rel="canonical" href="https://stablemo.vercel.app/">
   <meta name="theme-color" content="#071B3A">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="StableMo">
-  <meta property="og:title" content="StableMo — Trade stablecoins with Mobile Money">
-  <meta property="og:description" content="USDT escrowed on-chain. MoMo paid peer-to-peer. One flat fee, shown upfront. Built for Ghana.">
+  <meta property="og:locale" content="en_GH">
+  <meta property="og:title" content="StableMo — Buy & Sell USDT with Mobile Money in Ghana">
+  <meta property="og:description" content="On-chain escrow. Direct MoMo payment between traders. One flat 0.5% fee shown upfront. Built for Ghana — join the waitlist.">
   <meta property="og:url" content="https://stablemo.vercel.app/">
   <meta property="og:image" content="https://stablemo.vercel.app/assets/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="StableMo — trade stablecoins with Mobile Money">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="StableMo — Trade stablecoins with Mobile Money">
-  <meta name="twitter:description" content="USDT escrowed on-chain. MoMo paid peer-to-peer. Built for Ghana.">
+  <meta name="twitter:title" content="StableMo — Buy & Sell USDT with Mobile Money in Ghana">
+  <meta name="twitter:description" content="USDT escrowed on-chain. MoMo paid peer-to-peer. One flat fee, shown upfront. Built for Ghana.">
   <meta name="twitter:image" content="https://stablemo.vercel.app/assets/og-image.png">
 
   <!-- Icons -->
@@ -36,13 +43,60 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {"@type": "Question", "name": "Does StableMo hold my money?", "acceptedAnswer": {"@type": "Answer", "text": "No. Trade USDT is held by a smart-contract escrow on-chain, not by the platform. Mobile Money moves directly between the two traders."}},
-      {"@type": "Question", "name": "Who can see my Mobile Money number?", "acceptedAnswer": {"@type": "Answer", "text": "Only your trading counterparty and the trade's preselected arbiter, and only after a trade opens. MoMo numbers are never shown in public listings."}},
-      {"@type": "Question", "name": "What happens if a trade goes wrong?", "acceptedAnswer": {"@type": "Answer", "text": "Every trade has an arbiter chosen by the offer creator and accepted by both sides before the trade opens. The arbiter reviews the trade chat and rules to release the escrow or refund it."}},
-      {"@type": "Question", "name": "What does StableMo cost?", "acceptedAnswer": {"@type": "Answer", "text": "One flat platform fee of 0.5% in USDT, plus a 0.1% arbiter allocation per trade — both shown on the quote before you accept."}},
-      {"@type": "Question", "name": "When does StableMo launch?", "acceptedAnswer": {"@type": "Answer", "text": "StableMo is in pre-launch. Join the waitlist to be invited to the controlled Ghana pilot first."}}
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://stablemo.vercel.app/#org",
+        "name": "StableMo",
+        "alternateName": "StableMo by CryptoSI DAO",
+        "url": "https://stablemo.vercel.app/",
+        "logo": "https://stablemo.vercel.app/assets/logo-icon-192.png",
+        "description": "Peer-to-peer marketplace connecting USDT liquidity with Mobile Money payments in Ghana.",
+        "parentOrganization": {"@type": "Organization", "name": "CryptoSI DAO"},
+        "areaServed": {"@type": "Country", "name": "Ghana"},
+        "knowsAbout": ["USDT", "stablecoins", "Mobile Money", "peer-to-peer trading", "on-chain escrow"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://stablemo.vercel.app/#website",
+        "url": "https://stablemo.vercel.app/",
+        "name": "StableMo",
+        "publisher": {"@id": "https://stablemo.vercel.app/#org"},
+        "inLanguage": "en"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://stablemo.vercel.app/#page",
+        "url": "https://stablemo.vercel.app/",
+        "name": "Buy & Sell USDT with Mobile Money in Ghana | StableMo",
+        "description": "Ghana's P2P marketplace for trading USDT with Mobile Money — on-chain escrow, direct MoMo payment, flat 0.5% fee.",
+        "isPartOf": {"@id": "https://stablemo.vercel.app/#website"},
+        "about": {"@id": "https://stablemo.vercel.app/#org"},
+        "inLanguage": "en",
+        "primaryImageOfPage": "https://stablemo.vercel.app/assets/og-image.png"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "StableMo",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Android, iOS",
+        "description": "P2P marketplace to buy and sell USDT with Mobile Money in Ghana, with on-chain escrow and preselected trade arbiters.",
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free to join; 0.5% platform fee per completed trade"},
+        "publisher": {"@id": "https://stablemo.vercel.app/#org"}
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type": "Question", "name": "How do I buy USDT with Mobile Money in Ghana?", "acceptedAnswer": {"@type": "Answer", "text": "On StableMo, pick a bonded seller's offer at your preferred GHS rate, request the trade, and the seller locks the USDT in smart-contract escrow. You then pay the seller directly by Mobile Money within one hour and mark it sent. When the seller confirms your payment, the escrow releases the USDT to you."}},
+          {"@type": "Question", "name": "How do I sell USDT for Mobile Money (MoMo)?", "acceptedAnswer": {"@type": "Answer", "text": "Lock a one-time 100 USDT bond to enable offers, then publish a seller offer with your own GHS/USDT rate and limits, choosing an arbiter shown on your offer. When a buyer opens a trade, fund the escrow with the USDT plus fees, share your MoMo number inside the trade, confirm the payment when it lands, and the contract settles."}},
+          {"@type": "Question", "name": "Does StableMo hold my money?", "acceptedAnswer": {"@type": "Answer", "text": "No. Trade USDT is held by a smart-contract escrow on-chain, not by the platform. Mobile Money moves directly between the two traders."}},
+          {"@type": "Question", "name": "Who can see my Mobile Money number?", "acceptedAnswer": {"@type": "Answer", "text": "Only your trading counterparty and the trade's preselected arbiter, and only after a trade opens. MoMo numbers are never shown in public listings and never written to the blockchain."}},
+          {"@type": "Question", "name": "What happens if a trade goes wrong?", "acceptedAnswer": {"@type": "Answer", "text": "Every trade has an arbiter chosen by the offer creator and accepted by both sides before the trade opens. The arbiter reviews the complete trade chat and rules to release the escrow to the buyer or refund it to the seller. One ruling, on record."}},
+          {"@type": "Question", "name": "What are StableMo's fees?", "acceptedAnswer": {"@type": "Answer", "text": "A flat 0.5% platform fee in USDT plus a 0.1% arbiter allocation per trade — both shown on the quote screen before you accept. On a 100 USDT trade the platform fee is 0.5 USDT."}},
+          {"@type": "Question", "name": "Is StableMo available outside Ghana?", "acceptedAnswer": {"@type": "Answer", "text": "StableMo is Ghana-first by design: offer rates are set in GHS and settlement uses Ghana Mobile Money. The initial pilot is Ghana-only; international expansion may follow after launch."}},
+          {"@type": "Question", "name": "When does StableMo launch?", "acceptedAnswer": {"@type": "Answer", "text": "StableMo is in pre-launch. Join the waitlist to be invited to the controlled Ghana pilot first."}}
+        ]
+      }
     ]
   }
   </script>
@@ -77,7 +131,7 @@
       <div class="container hero-grid">
         <div class="hero-copy">
           <h1 class="hero-title">
-            <span class="line"><span class="line-inner">Trade stablecoins</span></span>
+            <span class="line"><span class="line-inner">Buy &amp; sell USDT</span></span>
             <span class="line"><span class="line-inner">with <span class="accent-gold">Mobile&nbsp;Money.</span></span></span>
           </h1>
           <p class="lede">StableMo connects USDT liquidity with everyday Mobile Money payments. Every trade is escrowed on-chain, paid peer-to-peer, and covered by a named arbiter you both agreed to.</p>
@@ -141,11 +195,35 @@
 
     <!-- PHOTO BAND -->
     <section class="photo-band" aria-label="Mobile Money is everyday life in Ghana">
-      <img class="band-img" src="/assets/hero-band.jpg" alt="Market trader with her phone at a bustling Accra market stall" fetchpriority="high">
+      <img class="band-img" src="/assets/hero-band.jpg" alt="Market trader with her phone at a bustling Accra market stall" width="1536" height="1024" fetchpriority="high">
       <div class="band-overlay"></div>
       <div class="container band-copy">
         <p class="band-quote reveal">Mobile Money already moves daily life in Ghana.</p>
         <p class="band-sub reveal">StableMo just gives it a stablecoin on-ramp — escrowed, priced fairly, settled between people.</p>
+      </div>
+    </section>
+
+    <!-- AT A GLANCE (AI-citable facts) -->
+    <section class="section facts" aria-label="StableMo at a glance">
+      <div class="container">
+        <div class="facts-grid stagger">
+          <div class="fact">
+            <strong>0.5%</strong>
+            <span>flat platform fee per trade, in USDT, shown before you accept</span>
+          </div>
+          <div class="fact">
+            <strong>100 USDT</strong>
+            <span>one-time user bond that unlocks seller and Quick Buy offers</span>
+          </div>
+          <div class="fact">
+            <strong>1 hour</strong>
+            <span>to fund escrow and to pay by Mobile Money — on every trade</span>
+          </div>
+          <div class="fact">
+            <strong>0 custody</strong>
+            <span>USDT held by smart-contract escrow; MoMo paid trader-to-trader</span>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -269,14 +347,14 @@
         <p class="section-sub reveal">Not a trading terminal — a marketplace for the woman selling tomatoes and the man running the corner shop.</p>
         <div class="people-grid stagger">
           <figure class="people-card">
-            <img src="/assets/photo-payment.jpg" alt="Hands confirming a Mobile Money payment on a phone" loading="lazy">
+            <img src="/assets/photo-payment.jpg" alt="Hands confirming a Mobile Money payment on a phone" width="900" height="600" loading="lazy">
             <figcaption>
               <strong>Pay like you already do</strong>
               <span>MoMo stays MoMo. No new bank, no cards, no learning curve — just a smarter way to buy USDT.</span>
             </figcaption>
           </figure>
           <figure class="people-card">
-            <img src="/assets/photo-trader.jpg" alt="Shop owner checking his phone at his store" loading="lazy">
+            <img src="/assets/photo-trader.jpg" alt="Shop owner checking his phone at his store" width="900" height="600" loading="lazy">
             <figcaption>
               <strong>Sell your USDT, your rate</strong>
               <span>Post an offer at your price, get paid directly to your MoMo, keep every cedi you quote.</span>
@@ -293,6 +371,14 @@
         <h2 class="reveal">Straight answers</h2>
         <div class="faq reveal">
           <details>
+            <summary>How do I buy USDT with Mobile Money in Ghana?<span class="faq-chev" aria-hidden="true"></span></summary>
+            <p>Pick a bonded seller's offer at your preferred GHS rate and request the trade — the seller then locks the USDT in smart-contract escrow. Pay the seller directly by MoMo within one hour, mark it sent, and the escrow releases the USDT to you once the seller confirms.</p>
+          </details>
+          <details>
+            <summary>How do I sell USDT for Mobile Money (MoMo)?<span class="faq-chev" aria-hidden="true"></span></summary>
+            <p>Lock a one-time 100 USDT bond to unlock offers, publish yours at your own GHS/USDT rate with your chosen arbiter shown on it, and get paid straight to your MoMo. Fund the escrow when a buyer opens a trade, confirm the payment when it lands — the contract settles.</p>
+          </details>
+          <details>
             <summary>Does StableMo hold my money?<span class="faq-chev" aria-hidden="true"></span></summary>
             <p>No. Trade USDT is held by a smart-contract escrow on-chain — not by the platform, not by an operator wallet. Mobile Money moves directly between the two traders.</p>
           </details>
@@ -305,8 +391,12 @@
             <p>Every trade has an arbiter chosen by the offer creator and accepted by both sides before opening. They see the complete trade chat — payment references included — and rule to release the escrow or refund it. One ruling, on record.</p>
           </details>
           <details>
-            <summary>What does it cost?<span class="faq-chev" aria-hidden="true"></span></summary>
+            <summary>What are StableMo's fees?<span class="faq-chev" aria-hidden="true"></span></summary>
             <p>A flat 0.5% platform fee in USDT plus a 0.1% arbiter allocation per trade. Both are shown on the quote screen before you accept — the amount you see is the deal you get.</p>
+          </details>
+          <details>
+            <summary>Is StableMo available outside Ghana?<span class="faq-chev" aria-hidden="true"></span></summary>
+            <p>StableMo is Ghana-first by design: rates are set in GHS and settlement uses Ghana Mobile Money. The initial pilot is Ghana-only.</p>
           </details>
           <details>
             <summary>When does StableMo launch?<span class="faq-chev" aria-hidden="true"></span></summary>

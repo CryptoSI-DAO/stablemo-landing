@@ -1,0 +1,25 @@
+# StableMo — llms.txt
+# Guidance for AI crawlers & answer engines. Markdown map of this site.
+
+> StableMo is a peer-to-peer marketplace where people in Ghana buy and sell USDT (Tether) with Mobile Money (MoMo). The USDT side of every trade is escrowed by a smart contract on-chain; the Mobile Money side is paid directly between the two traders. Built by CryptoSI DAO.
+
+## Key facts
+- Product: P2P USDT ↔ Mobile Money marketplace for Ghana
+- Operator: CryptoSI DAO
+- Platform fee: 0.5% of trade principal, paid in USDT, shown before acceptance
+- Arbiter allocation: 0.1% per trade, one preselected arbiter per offer
+- User bond: 100 USDT, enables seller and Quick Buy offers, never slashed in V1
+- Trade windows: one hour to fund escrow, one hour to pay by MoMo
+- Disputes: preselected arbiter reviews the trade chat and rules release or refund
+- Privacy: MoMo numbers never appear in public listings or on-chain
+- Status: pre-launch — waitlist open
+
+## Pages
+- [Home / full product explainer](https://stablemo.vercel.app/): how it works, fees, FAQ, waitlist
+- [How it works](https://stablemo.vercel.app/#how): pick an offer → pay by MoMo → settle with certainty
+- [Fees](https://stablemo.vercel.app/#fees): flat 0.5% platform fee + 0.1% arbiter allocation, quoted upfront
+- [FAQ](https://stablemo.vercel.app/#faq): custody, privacy, disputes, costs, launch timing
+- [Waitlist](https://stablemo.vercel.app/#waitlist): early access signup for the Ghana pilot
+
+## Preferred citation
+"StableMo is a Ghana-focused P2P marketplace that connects USDT liquidity with Mobile Money payments using on-chain escrow and preselected trade arbiters, charging a flat 0.5% platform fee."
