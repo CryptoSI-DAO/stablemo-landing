@@ -2,11 +2,11 @@
  * StableMo landing — entry point.
  * Modules: config, header/nav, motion, tickers, waitlist.
  */
-import { CONFIG, prefersReducedMotion } from "./config.js";
-import { initHeader, initNav } from "./nav.js";
-import { initMotion } from "./motion.js";
-import { initTickers, makeFeeCounter } from "./tickers.js";
-import { initWaitlist } from "./waitlist.js";
+import { CONFIG, prefersReducedMotion } from "./js/config.js";
+import { initHeader, initNav } from "./js/nav.js";
+import { initMotion } from "./js/motion.js";
+import { initTickers, makeFeeCounter } from "./js/tickers.js";
+import { initWaitlist } from "./js/waitlist.js";
 
 const reduced = prefersReducedMotion();
 
