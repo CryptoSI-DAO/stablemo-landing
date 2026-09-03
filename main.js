@@ -61,8 +61,7 @@
   var input = document.getElementById("wl-email");
   var btn = document.getElementById("wl-btn");
   var status = document.getElementById("wl-status");
-  var ENDPOINT =
-    "https://db.cryptosidao.org/mail-api/api/lists/9/subscribers";
+  var ENDPOINT = "/api/subscribe";
 
   function say(msg, ok) {
     status.textContent = msg;
