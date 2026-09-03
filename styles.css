@@ -93,6 +93,60 @@ p { color: var(--muted); }
 .btn-ghost:hover { border-color: var(--blue); color: var(--blue); }
 .btn-sm { padding: 10px 20px; font-size: 0.9rem; }
 
+/* ---- hero entrance ---- */
+.hero-title .line { display: block; overflow: hidden; padding-block: 0.08em; margin-block: -0.08em; }
+.hero-title .line-inner {
+  display: inline-block;
+  transform: translateY(115%);
+  animation: rise-in 0.9s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+.hero-title .line:nth-child(2) .line-inner { animation-delay: 0.12s; }
+@keyframes rise-in { to { transform: translateY(0); } }
+
+.hero-copy > *:not(.hero-title) {
+  opacity: 0;
+  animation: fade-up 0.7s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+.hero-copy > .lede { animation-delay: 0.35s; }
+.hero-copy > .hero-ctas { animation-delay: 0.47s; }
+.hero-copy > .trust-chips { animation-delay: 0.59s; }
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+
+.hero-visual .phone { animation: phone-in 1s cubic-bezier(0.19, 1, 0.22, 1) 0.25s both, phone-float 7s ease-in-out 1.4s infinite alternate; }
+@keyframes phone-in {
+  from { opacity: 0; transform: rotate(2deg) translateY(46px) scale(0.96); }
+  to { opacity: 1; transform: rotate(2deg) translateY(0) scale(1); }
+}
+@keyframes phone-float {
+  from { transform: rotate(2deg) translateY(0); }
+  to { transform: rotate(1.2deg) translateY(-12px); }
+}
+
+/* ambient orbs */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.5;
+  pointer-events: none;
+}
+.orb-blue { width: 480px; height: 480px; top: -160px; left: -140px; background: #146BFF; animation: orb-drift-a 26s ease-in-out infinite alternate; }
+.orb-gold { width: 420px; height: 420px; bottom: -120px; right: -120px; background: #FFB20A; opacity: 0.35; animation: orb-drift-b 32s ease-in-out infinite alternate; }
+@keyframes orb-drift-a { from { transform: translate(0, 0) scale(1); } to { transform: translate(70px, 50px) scale(1.15); } }
+@keyframes orb-drift-b { from { transform: translate(0, 0) scale(1); } to { transform: translate(-60px, -40px) scale(0.9); } }
+
+/* number tickers */
+.t-amt { font-variant-numeric: tabular-nums; }
+.t-rate { font-variant-numeric: tabular-nums; }
+.tick-up { animation: tick-up 0.35s ease; }
+@keyframes tick-up {
+  0% { transform: translateY(6px); opacity: 0.4; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
 /* ---------- header ---------- */
 .site-header {
   position: sticky;
@@ -449,9 +503,65 @@ details[open] .faq-chev { transform: rotate(225deg) translateY(-2px); }
 /* ---------- reveal on scroll ---------- */
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.65s ease, transform 0.65s ease; }
 .reveal.in { opacity: 1; transform: none; }
-.delay-1 { transition-delay: 0.1s; }
-.delay-2 { transition-delay: 0.2s; }
-.delay-3 { transition-delay: 0.3s; }
+
+/* stagger groups: children pop in sequence when the group enters */
+.stagger > * { opacity: 0; transform: translateY(22px); transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.19, 1, 0.22, 1); }
+.stagger.in > * { opacity: 1; transform: none; }
+.stagger.in > *:nth-child(1) { transition-delay: 0s; }
+.stagger.in > *:nth-child(2) { transition-delay: 0.09s; }
+.stagger.in > *:nth-child(3) { transition-delay: 0.18s; }
+.stagger.in > *:nth-child(4) { transition-delay: 0.27s; }
+.stagger.in > *:nth-child(5) { transition-delay: 0.36s; }
+.stagger.in > *:nth-child(6) { transition-delay: 0.45s; }
+
+/* timeline draw */
+.timeline { transition: none; }
+.timeline::before {
+  content: "";
+  position: absolute; top: 7px; left: 4%; right: 4%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--link), var(--blue) 55%, var(--gold));
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 1.4s cubic-bezier(0.65, 0, 0.35, 1) 0.15s;
+  opacity: 1;
+}
+.timeline.in::before { transform: scaleX(1); }
+.timeline li .tl-dot { transform: scale(0); transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1); }
+.timeline.in li:nth-child(1) .tl-dot { transition-delay: 0.2s; }
+.timeline.in li:nth-child(2) .tl-dot { transition-delay: 0.5s; }
+.timeline.in li:nth-child(3) .tl-dot { transition-delay: 0.8s; }
+.timeline.in li:nth-child(4) .tl-dot { transition-delay: 1.1s; }
+.timeline.in li .tl-dot { transform: scale(1); }
+
+/* ---------- micro-interactions ---------- */
+.site-header { transition: box-shadow 0.25s ease, background 0.25s ease; }
+.site-header.scrolled { box-shadow: 0 6px 24px rgba(7, 27, 58, 0.08); }
+
+.btn-primary, .btn-gold { position: relative; overflow: hidden; }
+.btn-primary::after, .btn-gold::after {
+  content: "";
+  position: absolute; top: 0; left: -80%;
+  width: 45%; height: 100%;
+  background: linear-gradient(105deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+  transform: skewX(-20deg);
+  animation: shine 4.5s ease-in-out infinite;
+}
+@keyframes shine {
+  0%, 55% { left: -80%; }
+  85%, 100% { left: 140%; }
+}
+
+.nav-toggle.open svg { transform: rotate(90deg); }
+.nav-toggle svg { transition: transform 0.2s ease; }
+
+/* waitlist success pop */
+.form-status.ok.pop { animation: pop-in 0.45s cubic-bezier(0.34, 1.56, 0.64, 1); }
+@keyframes pop-in {
+  0% { transform: scale(0.85); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
 
 /* ---------- responsive ---------- */
 @media (max-width: 960px) {
@@ -469,7 +579,6 @@ details[open] .faq-chev { transform: rotate(225deg) translateY(-2px); }
   .nav-toggle { display: block; order: -1; }
   .header-cta { display: inline-flex; }
   .site-nav {
-    display: none;
     position: absolute;
     top: 66px; left: 0; right: 0;
     background: var(--white);
@@ -479,8 +588,19 @@ details[open] .faq-chev { transform: rotate(225deg) translateY(-2px); }
     padding: 10px 20px 18px;
     border-bottom: 1px solid var(--border);
     box-shadow: var(--shadow-md);
+    transform: translateY(-12px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform 0.28s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.28s ease, visibility 0s 0.28s;
   }
-  .site-nav.open { display: flex; }
+  .site-nav.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: transform 0.28s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.28s ease, visibility 0s;
+  }
   .site-nav a { padding: 13px 4px; font-size: 1rem; border-bottom: 1px solid var(--cloud); }
   .site-nav .btn { margin: 12px 0 0; justify-content: center; }
   .waitlist-form { flex-direction: column; }
@@ -490,9 +610,18 @@ details[open] .faq-chev { transform: rotate(225deg) translateY(-2px); }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .reveal { opacity: 1; transform: none; transition: none; }
+  .reveal, .stagger > * { opacity: 1; transform: none; transition: none; }
+  .hero-title .line-inner { transform: none; animation: none; }
+  .hero-copy > *:not(.hero-title) { opacity: 1; animation: none; }
+  .hero-visual .phone { animation: none; transform: rotate(2deg); opacity: 1; }
+  .orb, .orb-blue, .orb-gold { display: none; }
+  .btn-primary::after, .btn-gold::after { display: none; }
+  .timeline::before { transform: scaleX(1); transition: none; }
+  .timeline li .tl-dot { transform: scale(1); transition: none; }
   .phone:hover { transform: rotate(2deg); }
   .app-pill::before { animation: none; }
+  .tick-up { animation: none; }
+  .form-status.ok.pop { animation: none; }
 }
 
 .visually-hidden {

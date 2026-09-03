@@ -72,9 +72,14 @@
 
     <!-- HERO -->
     <section class="hero">
+      <div class="orb orb-blue" aria-hidden="true"></div>
+      <div class="orb orb-gold" aria-hidden="true"></div>
       <div class="container hero-grid">
-        <div class="hero-copy reveal">
-          <h1>Trade stablecoins with <span class="accent-gold">Mobile&nbsp;Money.</span></h1>
+        <div class="hero-copy">
+          <h1 class="hero-title">
+            <span class="line"><span class="line-inner">Trade stablecoins</span></span>
+            <span class="line"><span class="line-inner">with <span class="accent-gold">Mobile&nbsp;Money.</span></span></span>
+          </h1>
           <p class="lede">StableMo connects USDT liquidity with everyday Mobile Money payments. Every trade is escrowed on-chain, paid peer-to-peer, and covered by a named arbiter you both agreed to.</p>
           <div class="hero-ctas">
             <a href="#waitlist" class="btn btn-primary">Join the waitlist</a>
@@ -87,7 +92,7 @@
           </ul>
         </div>
 
-        <div class="hero-visual reveal delay-1" aria-hidden="true">
+        <div class="hero-visual" aria-hidden="true">
           <div class="phone">
             <div class="phone-notch"></div>
             <div class="phone-screen">
@@ -100,15 +105,15 @@
                 <div class="trade-rows">
                   <div class="t-row">
                     <span class="t-cur">USDT</span>
-                    <span class="t-amt">100.00</span>
+                    <span class="t-amt" id="tkUsdt">0.00</span>
                   </div>
                   <div class="t-mid">
                     <span class="t-arrow">⇅</span>
-                    <span class="t-rate">₵16.20 / USDT</span>
+                    <span class="t-rate">₵<span id="tkRate">16.20</span> / USDT</span>
                   </div>
                   <div class="t-row">
                     <span class="t-cur gold">MoMo</span>
-                    <span class="t-amt">₵1,620</span>
+                    <span class="t-amt" id="tkMomo">₵0</span>
                   </div>
                 </div>
                 <div class="escrow-badge">
@@ -136,7 +141,7 @@
 
     <!-- VALUE STRIP -->
     <section class="strip">
-      <div class="container strip-grid">
+      <div class="container strip-grid stagger">
         <div class="strip-item"><span class="strip-ic">🔒</span><div><strong>On-chain escrow</strong><span>Funds locked until settlement</span></div></div>
         <div class="strip-item"><span class="strip-ic">📲</span><div><strong>Direct MoMo payment</strong><span>Peer-to-peer, no middleman</span></div></div>
         <div class="strip-item"><span class="strip-ic">🧾</span><div><strong>Transparent pricing</strong><span>Every fee shown upfront</span></div></div>
@@ -149,18 +154,18 @@
       <div class="container">
         <p class="kicker reveal">How it works</p>
         <h2 class="reveal">Three steps. No surprises.</h2>
-        <div class="steps">
-          <article class="step reveal">
+        <div class="steps stagger">
+          <article class="step">
             <div class="step-num">1</div>
             <h3>Pick an offer</h3>
             <p>Compare live GHS rates from bonded sellers — or post a Quick Buy request at your own price. You'll see the exact GHS amount and all fees before you commit.</p>
           </article>
-          <article class="step reveal delay-1">
+          <article class="step">
             <div class="step-num">2</div>
             <h3>Pay by Mobile Money</h3>
             <p>The seller's USDT is locked in smart-contract escrow first. Then you pay by MoMo directly — payment details stay private until the trade opens.</p>
           </article>
-          <article class="step reveal delay-2">
+          <article class="step">
             <div class="step-num">3</div>
             <h3>Settle with certainty</h3>
             <p>The seller confirms your payment and your USDT releases instantly. One-hour windows keep every trade moving — and a pre-agreed arbiter is there if it doesn't.</p>
@@ -175,29 +180,29 @@
         <p class="kicker reveal">Why StableMo</p>
         <h2 class="reveal">Trust first. Crypto second.</h2>
         <p class="section-sub reveal">StableMo is built to feel like a dependable payment marketplace — not a speculative trading app.</p>
-        <div class="cards">
-          <article class="card reveal">
+        <div class="cards stagger">
+          <article class="card">
             <div class="card-ic blue">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
             </div>
             <h3>Your USDT stays in escrow</h3>
             <p>A smart contract holds the trade amount until settlement. The platform never touches trade funds — and can't move them.</p>
           </article>
-          <article class="card reveal delay-1">
+          <article class="card">
             <div class="card-ic gold">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M12 18h.01"/></svg>
             </div>
             <h3>Real peer-to-peer</h3>
             <p>Mobile Money moves straight between you and your counterparty. No platform custody, no float, no forwarding.</p>
           </article>
-          <article class="card reveal delay-2">
+          <article class="card">
             <div class="card-ic blue">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 15l2 2 4-4"/></svg>
             </div>
             <h3>Prices you can check</h3>
             <p>Sellers set their own rates; the market keeps them honest. One flat platform fee, printed on every quote before you accept.</p>
           </article>
-          <article class="card reveal delay-3">
+          <article class="card">
             <div class="card-ic gold">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
             </div>
@@ -214,10 +219,10 @@
         <p class="kicker kicker-light reveal">The life of a trade</p>
         <h2 class="light reveal">Escrowed at every step</h2>
         <ol class="timeline" aria-label="Trade lifecycle">
-          <li class="reveal"><span class="tl-dot"></span><strong>Offer accepted</strong><span>Rate, limits and arbiter agreed — nothing moves yet.</span></li>
-          <li class="reveal delay-1"><span class="tl-dot"></span><strong>USDT escrowed</strong><span>Seller funds the smart contract. 1-hour payment window starts.</span></li>
-          <li class="reveal delay-2"><span class="tl-dot"></span><strong>MoMo paid</strong><span>You pay the seller directly and mark it sent with a reference.</span></li>
-          <li class="reveal delay-3"><span class="tl-dot tl-dot-gold"></span><strong>USDT released</strong><span>Seller confirms — or the arbiter rules. Escrow settles either way.</span></li>
+          <li><span class="tl-dot"></span><strong>Offer accepted</strong><span>Rate, limits and arbiter agreed — nothing moves yet.</span></li>
+          <li><span class="tl-dot"></span><strong>USDT escrowed</strong><span>Seller funds the smart contract. 1-hour payment window starts.</span></li>
+          <li><span class="tl-dot"></span><strong>MoMo paid</strong><span>You pay the seller directly and mark it sent with a reference.</span></li>
+          <li><span class="tl-dot tl-dot-gold"></span><strong>USDT released</strong><span>Seller confirms — or the arbiter rules. Escrow settles either way.</span></li>
         </ol>
       </div>
     </section>
@@ -230,9 +235,9 @@
           <h2>One flat fee.<br>Zero fine print.</h2>
           <p class="section-sub">You see the complete cost — platform fee, arbiter allocation, network cost and your net USDT — on the quote screen, before you accept any trade.</p>
         </div>
-        <div class="fee-card reveal delay-1">
+        <div class="fee-card reveal">
           <div class="fee-main">
-            <span class="fee-num">0.5<small>%</small></span>
+            <span class="fee-num"><span id="feeNum">0.0</span><small>%</small></span>
             <span class="fee-label">platform fee<br>paid in USDT</span>
           </div>
           <div class="fee-sub">
