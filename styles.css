@@ -121,8 +121,7 @@ p { color: var(--muted); }
 .site-nav a { text-decoration: none; color: var(--ink); font-weight: 500; font-size: 0.95rem; transition: color 0.15s; }
 .site-nav a:hover { color: var(--blue); }
 .site-nav .btn { margin-left: 4px; }
-.header-cta { margin-left: auto; }
-.site-nav + .header-cta { margin-left: 0; }
+.header-cta { display: none; margin-left: auto; }
 
 /* ---------- hero ---------- */
 .hero {
@@ -467,7 +466,7 @@ details[open] .faq-chev { transform: rotate(225deg) translateY(-2px); }
 
 @media (max-width: 740px) {
   .nav-toggle { display: block; order: -1; }
-  .header-cta { display: none; }
+  .header-cta { display: inline-flex; }
   .site-nav {
     display: none;
     position: absolute;
